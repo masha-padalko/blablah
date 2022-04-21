@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#container {
+	background: url("files/background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	display: grid;
+    place-items: center;
+    position: relative;
+}
+
+#container:before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(241, 241, 241, 0.5);
+  filter: blur(10px);
+  z-index: 2;
+}
+
+.card {
+	width: 650px;
+	height: 250px;
+	border: 1px solid black;
+	border-radius: 40px;
+	background-color: white;
+	position: relative;
+    z-index: 3;
+}
+
+
+.svg-clipped {
+    -webkit-clip-path: url(#svgPath);
+    clip-path: url(#svgPath);
+}
